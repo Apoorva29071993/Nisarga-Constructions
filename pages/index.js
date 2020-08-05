@@ -11,8 +11,11 @@ import Typography from "@material-ui/core/Typography";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-
 import CallToAction from "../src/ui/CallToAction";
+import FirstRow from "../src/ui/FirstRow";
+import SecondRow from "../src/ui/SecondRow";
+import ThirdRow from "../src/ui/ThirdRow";
+import FourthRow from "../src/ui/FourthRow";
 
 import animationData from "../src/animations/landinganimation/data";
 
@@ -63,7 +66,7 @@ const useStyles = makeStyles(theme => ({
   mainContainer: {
     marginTop: "5em",
     [theme.breakpoints.down("md")]: {
-      marginTop: "3em"
+      marginTop: "4em"
     },
     [theme.breakpoints.down("xs")]: {
       marginTop: "2em"
@@ -166,15 +169,33 @@ export default function LandingPage(props) {
         <meta property="og:url" key="og:url" content="arc.com" />
         <link rel="canonical" key="canonical" href="arc.com" />
       </Head>
+
+        <Grid item>
+          <FirstRow setValue={props.setValue} />
+       </Grid>
+
+       <Grid item>
+          <SecondRow setValue={props.setValue} />
+       </Grid>
+
+       <Grid item>
+          <ThirdRow setValue={props.setValue} />
+       </Grid>
+
+       <Grid item>
+          <FourthRow setValue={props.setValue} />
+       </Grid>
+
+
       <Grid item>
         {" "}
         {/*-----Hero Block-----*/}
         <Grid container justify="flex-end" alignItems="center" direction="row">
           <Grid sm item className={classes.heroTextContainer}>
             <Typography variant="h1" align="center">
-              Building Contructions at
+              Contruction/Renovation Works
               <br />
-              best price for customers
+              At Best Price 
             </Typography>
             <Grid
               container
@@ -195,7 +216,7 @@ export default function LandingPage(props) {
                     });
                   }}
                 >
-                  Free Estimate
+                  Free Quotation
                 </Button>
               </Grid>
               <Grid item>

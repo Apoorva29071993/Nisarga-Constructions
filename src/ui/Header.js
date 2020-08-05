@@ -16,6 +16,7 @@ import { useTheme } from "@material-ui/core/styles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
+import HouseIcon from "@material-ui/icons/House"
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
@@ -30,6 +31,7 @@ import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import Grid from "@material-ui/core/Grid";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { Typography } from "@material-ui/core";
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -48,6 +50,7 @@ const useStyles = makeStyles(theme => ({
   toolbarMargin: {
     ...theme.mixins.toolbar,
     marginBottom: "3em",
+    minHeight: "25px",
     [theme.breakpoints.down("md")]: {
       marginBottom: "2em"
     },
@@ -106,6 +109,12 @@ const useStyles = makeStyles(theme => ({
     height: "50px",
     width: "50px"
   },
+  houseIcon: {
+    height: "80px",
+    width: "80px",
+    color : "white"
+
+  },
   drawerIconContainer: {
     marginLeft: "auto",
     "&:hover": {
@@ -129,7 +138,8 @@ const useStyles = makeStyles(theme => ({
     }
   },
   appbar: {
-    zIndex: theme.zIndex.modal + 1
+    zIndex: theme.zIndex.modal + 1 ,
+    backgroundColor : "#00203FFF"
   },
   expansion: {
     backgroundColor: theme.palette.common.blue,
@@ -153,6 +163,12 @@ const useStyles = makeStyles(theme => ({
     },
     backgroundColor: props =>
       props.value === 1 ? "rgba(0, 0, 0, 0.14)" : "inherit"
+  },
+  logoContent : {
+    fontSize : "22px" ,
+    fontWeight : 900 ,
+    fontFamily : "Roboto",
+    color : "#ADEFD1FF"
   }
 }));
 
@@ -164,6 +180,7 @@ export default function Header(props) {
 
   const [openDrawer, setOpenDrawer] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
+  
   const [openMenu, setOpenMenu] = useState(false);
 
   const [previousURL, setPreviousURL] = useState("");
@@ -176,6 +193,7 @@ export default function Header(props) {
     setAnchorEl(e.currentTarget);
     setOpenMenu(true);
   };
+
 
   const handleMenuItemClick = (e, i) => {
     setAnchorEl(null);
@@ -197,38 +215,50 @@ export default function Header(props) {
 
   const menuOptions = [
     {
-      name: "Custom Software Development",
+      name: "TurnKey House Construction",
       link: "/customsoftware",
       activeIndex: 1,
       selectedIndex: 0
     },
     {
-      name: "iOS/Android App Development",
+      name: "Compound Wall Construction",
       link: "/mobileapps",
       activeIndex: 1,
       selectedIndex: 1
     },
     {
-      name: "Website Development",
+      name: "Commercial Construction",
       link: "/websites",
       activeIndex: 1,
       selectedIndex: 2
+    },
+    {
+      name: "Carpentry & Woodwork",
+      link: "/websites",
+      activeIndex: 1,
+      selectedIndex: 3
+    },
+    {
+      name: "Kitchen Renovation",
+      link: "/websites",
+      activeIndex: 1,
+      selectedIndex: 4
     }
   ];
 
   const routes = [
     { name: "Home", link: "/", activeIndex: 0 },
     {
-      name: "Services",
+      name: "Hire Professionals",
       link: "/services",
       activeIndex: 1,
       ariaOwns: anchorEl ? "simple-menu" : undefined,
       ariaPopup: anchorEl ? "true" : undefined,
       mouseOver: event => handleClick(event)
     },
-    { name: "The Revolution", link: "/revolution", activeIndex: 2 },
-    { name: "About Us", link: "/about", activeIndex: 3 },
-    { name: "Contact Us", link: "/contact", activeIndex: 4 }
+    { name: "How It Works", link: "/revolution", activeIndex: 3 },
+    { name: "Our Projects", link: "/about", activeIndex: 4 },
+    { name: "Contact Us", link: "/contact", activeIndex: 5 }
   ];
 
   function checkPath() {
@@ -525,56 +555,34 @@ export default function Header(props) {
               disableRipple
               onClick={() => props.setValue(0)}
               className={classes.logoContainer}
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none" , 
+              color : "white" ,
+              fontSize : "30px" ,
+              fontFamily : "Raleway" ,
+            lineHeight : 1.5}}
             >
-              <svg
-                className={classes.logo}
-                id="Layer_1"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 480 139"
-              >
-                <style>{`.st0{fill:none}.st1{fill:#fff}.st2{font-family:Raleway; font-weight:300}.st6{fill:none;stroke:#000;stroke-width:3;stroke-miterlimit:10}`}</style>
-                <path d="M448.07-1l-9.62 17.24-8.36 14.96L369.93 139H-1V-1z" />
-                <path className="st0" d="M-1 139h479.92v.01H-1z" />
-                <text
-                  transform="translate(161.994 60.233)"
-                  className="st1 st2"
-                  fontSize="57"
-                >
-                  Nisarga
-                </text>
-                <text
-                  transform="translate(17.692 120.015)"
-                  className="st1 st2"
-                  fontSize="54"
-                >
-                  Constructions
-                </text>
-                <path
-                  className="st0"
-                  d="M382.44 116.43l47.65-85.23 8.36-14.96M369.83 139l-.01.01L362 153"
-                />
-                <path
-                  d="M438.76 15.76l-56.42 100.91c-12.52-10.83-20.45-26.82-20.45-44.67 0-32.58 26.42-59 59-59 6.23 0 12.24.97 17.87 2.76z"
-                  fill="#0b72b9"
-                />
-                <path d="M479.89 72c0 32.58-26.42 59-59 59-14.73 0-28.21-5.4-38.55-14.33l56.42-100.91c23.85 7.57 41.13 29.89 41.13 56.24z" />
-                <g id="Group_186" transform="translate(30.153 11.413)">
-                  <g id="Group_185">
-                    <g id="Words">
-                      <path
-                        id="Path_59"
-                        className="st1"
-                        d="M405.05 14.4l-.09 80.38-7.67-.01.06-52.25-29.4 52.21-7.94-.01 45.04-80.32z"
-                      />
-                    </g>
-                  </g>
-                </g>
-                <path
-                  className="st0"
-                  d="M457-17l-8.93 16-9.62 17.24-8.36 14.96L369.93 139l-.01.01L361 155"
-                />
-              </svg>
+
+            <IconButton
+              className={classes.drawerIconContainer}
+              disableRipple
+            >
+              <HouseIcon className={classes.houseIcon} />
+            </IconButton>
+
+            <Grid container direction="column" 
+            alignItems="center" className={classes.logoContent}>
+              <Grid item>
+                <Typography variant="inherit">
+                Mr.Apoorva  
+                </Typography>
+              </Grid>
+              <Grid>
+              <Typography variant="inherit">
+              Website Development  
+              </Typography>
+              </Grid>
+            </Grid>
+
             </Button>
             <Hidden mdDown>{tabs}</Hidden>
             <Hidden lgUp>{drawer}</Hidden>
