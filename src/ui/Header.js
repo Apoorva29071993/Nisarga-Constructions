@@ -216,7 +216,7 @@ export default function Header(props) {
   const menuOptions = [
     {
       name: "TurnKey House Construction",
-      link: "/customsoftware",
+      link: "/turnkeyHouse",
       activeIndex: 1,
       selectedIndex: 0
     },
@@ -256,9 +256,9 @@ export default function Header(props) {
       ariaPopup: anchorEl ? "true" : undefined,
       mouseOver: event => handleClick(event)
     },
-    { name: "How It Works", link: "/revolution", activeIndex: 3 },
-    { name: "Our Projects", link: "/about", activeIndex: 4 },
-    { name: "Contact Us", link: "/contact", activeIndex: 5 }
+    { name: "How It Works", link: "/revolution", activeIndex: 2 },
+    { name: "Our Projects", link: "/about", activeIndex: 3 },
+    { name: "Contact Us", link: "/contact", activeIndex: 4 }
   ];
 
   function checkPath() {
