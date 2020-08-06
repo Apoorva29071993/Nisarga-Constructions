@@ -174,12 +174,13 @@ export default function LandingPage(props) {
           <FirstRow setValue={props.setValue} />
        </Grid>
 
+       
        <Grid item>
-          <SecondRow setValue={props.setValue} />
+          <ThirdRow setValue={props.setValue} />
        </Grid>
 
        <Grid item>
-          <ThirdRow setValue={props.setValue} />
+          <SecondRow setValue={props.setValue} />
        </Grid>
 
        <Grid item>

@@ -83,73 +83,147 @@ export default function FourthRow(props) {
                 Why Choose Jakati's
                 </Typography>
         </Grid> 
- {/* End 1st row*/}   
+ {/* End 1st row*/}  
 
- {/* Start 2nd row*/}
-   <Grid container style={{marginTop : "50px"}} alignItems="center" justify="space-between">
-    
-    <Grid item >
-        <img src="/assets/bulb.svg" alt="grey spotted puppy"
-          width="80rem"  height="100rem"
-             style={{ maxWidth: matchesMD ? 300 : undefined  }}
-         />
-    </Grid>
-    <Grid item style={{marginLeft : "20px"}}>
-    <Grid container direction="column" >
-        <Grid item >
-                <Typography variant="h2" align="flex-start"
-                    style={{ fontSize: matchesSM ? "1.25rem" : "2.5rem" ,
-                    color : "#00203FFF" ,
-                        }}
-                    >
-                Safe Money Transaction
-                </Typography>
-        </Grid> 
-        <Grid item >
-                <Typography variant="paragraph" align="flex-start"
-                    style={{ fontSize: matchesSM ? "1.25rem" : "1.25rem" ,
-                    color : "#00203FFF" ,
-                        }}
-                    >
-                We work on escrmodel . No Advance to contractors .<br/> Safe Money Transactions
-                </Typography>
-        </Grid>
-    </Grid>   
-    </Grid> 
+           
+        {/* Start 2nd row*/} 
+                <Grid item justify="flex-start" container direction="row" 
+                  style={{marginTop : "50px"}}>
+                  
+                    <Grid item style={{marginLeft : "1em" , marginRight : "1em"}}>
+                    <img src="/assets/bulb.svg" alt="grey spotted puppy"
+                        width="80rem"  height="100rem"
+                            style={{ maxWidth: matchesMD ? 300 : undefined  }}
+                        />
+                    </Grid>
+                    <Grid item>
+                        <Grid container direction="column">
+                        <Grid item >
+                                <Typography variant="h2" align="flex-start"
+                                    style={{ fontSize: matchesSM ? "1.25rem" : "2.5rem" ,
+                                    color : "white" ,
+                                        }}
+                                    >
+                                Safe Money Transaction
+                                </Typography>
+                        </Grid> 
+                        <Grid item >
+                                <Typography variant="paragraph" align="flex-start"
+                                    style={{ fontSize: matchesSM ? "1.25rem" : "1.25rem" ,
+                                    color : "#00203FFF" ,
+                                        }}
+                                    >
+                                We work on escrmodel . No Advance to contractors .<br/> Safe Money Transactions
+                                </Typography>
+                        </Grid> 
+                        </Grid>
+                    </Grid>
 
 
-    <Grid item >
-        <img src="/assets/bell.svg" alt="grey spotted puppy"
-          width="100rem"  height="100rem"
-             style={{ maxWidth: matchesMD ? 300 : undefined  }}
-         />
-    </Grid>
-    <Grid item >
-    <Grid container direction="column" >
-        <Grid item >
-                <Typography variant="h2" align="flex-start"
-                    style={{ fontSize: matchesSM ? "1.25rem" : "2.5rem" ,
-                    color : "#00203FFF" ,
-                        }}
-                    >
-                Transparency
-                </Typography>
-        </Grid> 
-        <Grid item >
-                <Typography variant="subtitle2" align="flex-start"
-                    style={{ fontSize: matchesSM ? "1.25rem" : "1.25rem" ,
-                    color : "#00203FFF" ,
-                        }}
-                    >
-                Clear And Detail quotation and <br/>
-                construction contracts.
-                </Typography>
-        </Grid>
-    </Grid>   
-    </Grid> 
+                    <Grid item style={{marginLeft : "20em" , marginRight : "1em"}}>
+                    <img src="/assets/stopwatch.svg" alt="grey spotted puppy"
+                        width="80rem"  height="100rem"
+                            style={{ maxWidth: matchesMD ? 300 : undefined  }}
+                        />
+                    </Grid>
+                    <Grid item>
+                        <Grid container direction="column">
+                        <Grid item >
+                                <Typography variant="h2" align="flex-start"
+                                    style={{ fontSize: matchesSM ? "1.25rem" : "2.5rem" ,
+                                    color : "white" ,
+                                        }}
+                                    >
+                                Transparency
+                                </Typography>
+                        </Grid> 
+                        <Grid item >
+                                <Typography variant="paragraph" align="flex-start"
+                                    style={{ fontSize: matchesSM ? "1.25rem" : "1.25rem" ,
+                                    color : "#00203FFF" ,
+                                        }}
+                                    >
+                                Clear and detail quotation and construction contracts.<br/>
+                                 Online and 24x7 access to specification
+                                </Typography>
+                        </Grid> 
+                        </Grid>
+                    </Grid>
+                </Grid>
+                
+     {/* End 2nd row*/} 
 
-    </Grid>
- {/* End 2nd row*/}
+     {/* Start 3rd row*/} 
+     <Grid item justify="flex-start" container direction="row" 
+                  style={{marginTop : "60px" , marginBottom : "30px"}}>
+                  
+                    <Grid item style={{marginLeft : "1em" , marginRight : "1em"}}>
+                    <img src="/assets/phone.svg" alt="grey spotted puppy"
+                        width="80rem"  height="100rem"
+                            style={{ maxWidth: matchesMD ? 300 : undefined  }}
+                        />
+                    </Grid>
+                    <Grid item>
+                        <Grid container direction="column">
+                        <Grid item >
+                                <Typography variant="h2" align="flex-start"
+                                    style={{ fontSize: matchesSM ? "1.25rem" : "2.5rem" ,
+                                    color : "white" ,
+                                        }}
+                                    >
+                                Quality Assurance
+                                </Typography>
+                        </Grid> 
+                        <Grid item >
+                                <Typography variant="paragraph" align="flex-start"
+                                    style={{ fontSize: matchesSM ? "1.25rem" : "1.25rem" ,
+                                    color : "#00203FFF" ,
+                                        }}
+                                    >
+                                 In-house dedicated project management team to check  <br/> the quality
+                                 and progress of project. 
+                                </Typography>
+                        </Grid> 
+                        </Grid>
+                    </Grid>
+
+
+                    <Grid item style={{marginLeft : "20em" , marginRight : "1em"}}>
+                    <img src="/assets/outreach.svg" alt="grey spotted puppy"
+                        width="80rem"  height="100rem"
+                            style={{ maxWidth: matchesMD ? 300 : undefined  }}
+                        />
+                    </Grid>
+                    <Grid item>
+                        <Grid container direction="column">
+                        <Grid item >
+                                <Typography variant="h2" align="flex-start"
+                                    style={{ fontSize: matchesSM ? "1.25rem" : "2.5rem" ,
+                                    color : "white" ,
+                                        }}
+                                    >
+                                On Time
+                                </Typography>
+                        </Grid> 
+                        <Grid item >
+                                <Typography variant="paragraph" align="flex-start"
+                                    style={{ fontSize: matchesSM ? "1.25rem" : "1.25rem" ,
+                                    color : "#00203FFF" ,
+                                        }}
+                                    >
+                                 ZERO tolerance for delays. Strict monetary penalty <br/>
+                                  clauses for any delay in the project. 
+                                </Typography>
+                        </Grid> 
+                        </Grid>
+                    </Grid>
+                </Grid>
+                
+     {/* End 3rd row*/} 
+
+            
+
+ 
 
  
 
