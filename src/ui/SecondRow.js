@@ -34,8 +34,8 @@ const useStyles = makeStyles(theme => ({
     height: "40em",
     width: "100%",
     [theme.breakpoints.down("md")]: {
-      backgroundImage: `url("/assets/houseNew.jpg")`,
-      backgroundAttachment: "inherit"
+      backgroundImage: `url("/assets/repeatingBackground.svg")`,
+      backgroundAttachment: "inherit" 
     }
   },
   estimateButton: {
@@ -67,16 +67,18 @@ export default function FirstRow(props) {
   const classes = useStyles();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+  const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <Grid
       container
       alignItems="center"
+      align="center"
       justify="space-around"
       className={classes.background}
-      direction="row"
+      direction={matchesMD ? "column" : "row"}
     >
-       <Grid item>
+       <Grid item >
          <LazyLoadImage
               className={classes.icon}
               alt="custom software icon"

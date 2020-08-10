@@ -61,6 +61,7 @@ export default function FirstRow(props) {
   const classes = useStyles();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+  const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
   <Grid container style={{ minHeight : "20px"}}>  
@@ -68,15 +69,14 @@ export default function FirstRow(props) {
       className={classes.background}
       direction="column"
     >
-       <Grid item style={{marginTop :"6px" ,marginBottom : "50px"}}>
-          <Typography
-                  variant="h1"
-                  gutterBottom
+       <Grid item style={{marginTop :matchesMD ? "3em" : "5em" ,
+        marginBottom : "50px"}} >
+          <Typography variant="h1" gutterBottom align="center"
                   style={{ lineHeight: matchesSM ? 1.1 : null , 
-                    color : "#00203FFF" ,
-                fontSize : "50px" }}
+                           color : "#00203FFF" ,
+                         fontSize : matchesMD ? "35px" : "50px" }}
                 >
-            House Construction Company | Best Building Contractors
+            House Construction Company |{matchesMD ? <br/> : null} Best Building Contractors
             </Typography>
         </Grid>    
 
@@ -92,7 +92,7 @@ export default function FirstRow(props) {
          </Grid>        
 
    
-              <Grid item style={{marginTop : "150px"}}> 
+              <Grid item style={{marginTop : matchesMD ? "130px" : "150px"}}> 
                 <Button
                     component={Link}
                     href="/revolution"

@@ -21,6 +21,7 @@
     "react": "latest",
     "react-dom": "latest",
     "react-ga": "^2.7.0",
+    "react-images": "^1.1.7",
     "react-lazy-load-image-component": "^1.4.3",
     "react-lottie": "^1.2.3"
   },

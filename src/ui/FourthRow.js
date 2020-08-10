@@ -7,6 +7,7 @@ import Link from "../Link";
 import Button from "@material-ui/core/Button";
 import ButtonArrow from "./ButtonArrow";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import Carousel from 'react-images';
 import { LazyLoadImage,  LazyLoadComponent } from "react-lazy-load-image-component";
 
 const useStyles = makeStyles(theme => ({
@@ -68,6 +69,9 @@ export default function FourthRow(props) {
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
+  const images = [{ source: '/assets/founder.jpg' },
+                   { source: '/assets/houseBack.jpg' },
+                   { source: '/assets/houseNew.jpg' }];
 
   return (
   <Grid container direction="row" justify="center"
@@ -76,7 +80,8 @@ export default function FourthRow(props) {
  {/* Start 1st row*/}
         <Grid item >
                 <Typography variant="h3" align="center"
-                    style={{ fontSize: matchesSM ? "1.25rem" : "7rem" ,
+                    style={{ fontSize: matchesMD ? "4rem" : "7rem" ,
+                    marginTop : "2rem" ,
                     color : "#00203FFF" ,
                         }}
                     >
@@ -87,7 +92,8 @@ export default function FourthRow(props) {
 
            
         {/* Start 2nd row*/} 
-                <Grid item justify="flex-start" container direction="row" 
+                <Grid item justify="flex-start" 
+                align={matchesMD ? "center" : undefined} container direction={matchesMD ? "column" : "row"} 
                   style={{marginTop : "50px"}}>
                   
                     <Grid item style={{marginLeft : "1em" , marginRight : "1em"}}>
@@ -96,31 +102,35 @@ export default function FourthRow(props) {
                             style={{ maxWidth: matchesMD ? 300 : undefined  }}
                         />
                     </Grid>
+
                     <Grid item>
                         <Grid container direction="column">
-                        <Grid item >
-                                <Typography variant="h2" align="flex-start"
-                                    style={{ fontSize: matchesSM ? "1.25rem" : "2.5rem" ,
-                                    color : "white" ,
-                                        }}
-                                    >
-                                Safe Money Transaction
-                                </Typography>
-                        </Grid> 
-                        <Grid item >
-                                <Typography variant="paragraph" align="flex-start"
-                                    style={{ fontSize: matchesSM ? "1.25rem" : "1.25rem" ,
-                                    color : "#00203FFF" ,
-                                        }}
-                                    >
-                                We work on escrmodel . No Advance to contractors .<br/> Safe Money Transactions
-                                </Typography>
-                        </Grid> 
+                            <Grid item >
+                                    <Typography variant="h2" align="flex-start"
+                                        style={{ fontSize: matchesSM ? "1.25rem" : "2.5rem" ,
+                                        color : "white" ,
+                                            }}
+                                        >
+                                    Safe Money Transaction
+                                    </Typography>
+                            </Grid> 
+
+                            <Grid item >
+                                    <Typography variant="paragraph" align="flex-start"
+                                        style={{ fontSize: matchesSM ? "1.25rem" : "1.25rem" ,
+                                        color : "#00203FFF" ,
+                                            }}
+                                        >
+                                    We work on escrmodel . No Advance to contractors .<br/> Safe Money Transactions
+                                    </Typography>
+                            </Grid> 
+
                         </Grid>
                     </Grid>
 
 
-                    <Grid item style={{marginLeft : "20em" , marginRight : "1em"}}>
+                    <Grid item style={{marginLeft : matchesMD ? "0em" : "20em" ,
+                     marginRight : "1em"}}>
                     <img src="/assets/stopwatch.svg" alt="grey spotted puppy"
                         width="80rem"  height="100rem"
                             style={{ maxWidth: matchesMD ? 300 : undefined  }}
@@ -154,8 +164,10 @@ export default function FourthRow(props) {
      {/* End 2nd row*/} 
 
      {/* Start 3rd row*/} 
-     <Grid item justify="flex-start" container direction="row" 
-                  style={{marginTop : "60px" , marginBottom : "30px"}}>
+     <Grid item justify="flex-start" container 
+            direction={matchesMD ? "column" : "row" } 
+            align={matchesMD ? "center" : undefined}
+            style={{marginTop : matchesMD ? "30px" : "60px" , marginBottom : "30px"}}>
                   
                     <Grid item style={{marginLeft : "1em" , marginRight : "1em"}}>
                     <img src="/assets/phone.svg" alt="grey spotted puppy"
@@ -188,7 +200,7 @@ export default function FourthRow(props) {
                     </Grid>
 
 
-                    <Grid item style={{marginLeft : "20em" , marginRight : "1em"}}>
+                    <Grid item style={{marginLeft : matchesMD ? 0 : "20em" , marginRight : "1em"}}>
                     <img src="/assets/outreach.svg" alt="grey spotted puppy"
                         width="80rem"  height="100rem"
                             style={{ maxWidth: matchesMD ? 300 : undefined  }}
@@ -221,9 +233,16 @@ export default function FourthRow(props) {
                 
      {/* End 3rd row*/} 
 
-            
-
- 
+    {/* Start 4th row*/}         
+    <Grid item container justify="center">
+    <Typography variant="h1" align="center" 
+    style={{fontSize : matchesMD ? "3em" : "7em" , color : "aqua"}}>
+        Products Images Slide
+    </Typography>
+    <Carousel views={images} />;
+     </Grid>
+     {/* End 4th row*/} 
+                                        
 
  
 

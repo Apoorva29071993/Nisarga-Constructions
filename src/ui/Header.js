@@ -48,7 +48,6 @@ function ElevationScroll(props) {
 
 const useStyles = makeStyles(theme => ({
   toolbarMargin: {
-    ...theme.mixins.toolbar,
     marginBottom: "3em",
     minHeight: "25px",
     [theme.breakpoints.down("md")]: {
@@ -168,8 +167,12 @@ const useStyles = makeStyles(theme => ({
     fontSize : "22px" ,
     fontWeight : 900 ,
     fontFamily : "Roboto",
-    color : "#ADEFD1FF"
-  }
+    color : "#ADEFD1FF" ,
+    [theme.breakpoints.down("md")]: {
+      marginLeft: "5em"
+    }
+  },
+  
 }));
 
 export default function Header(props) {
@@ -177,6 +180,7 @@ export default function Header(props) {
   const theme = useTheme();
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
   const matches = useMediaQuery(theme.breakpoints.down("md"));
+  const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
 
   const [openDrawer, setOpenDrawer] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -569,10 +573,10 @@ export default function Header(props) {
               <HouseIcon className={classes.houseIcon} />
             </IconButton>
 
-            <Grid container direction="column" 
-            alignItems="center" className={classes.logoContent}>
-              <Grid item>
-                <Typography variant="inherit">
+            <Grid container direction="column" justify="center"
+            alignItems="center"  className={classes.logoContent}>
+              <Grid item >
+                <Typography variant="inherit"  >
                 Mr.Apoorva  
                 </Typography>
               </Grid>

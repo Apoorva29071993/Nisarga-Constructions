@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     [theme.breakpoints.down("md")]: {
       backgroundImage: `url("/assets/infoBackground.svg")`,
-      backgroundAttachment: "inherit"
+      
     }
   },
   estimateButton: {
@@ -67,18 +67,19 @@ export default function FirstRow(props) {
   const classes = useStyles();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+  const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
   <Grid container direction="column" alignItems="flex-start"
     style={{}} >
   {/* Start 1st row*/}
-    <Grid container alignItems="center" justify="space-around"
+    <Grid container alignItems="center" justify="space-evenly"
       className={classes.background}
       direction="row"
     >
     {/* Start 1st item*/}
     <Grid item>
-     <Grid item>
+     <Grid item style={{marginRight : matchesMD ? "30px" : 0}}>
           <LazyLoadImage className={classes.icon} alt="custom software icon"
                 src="/assets/people.svg"
               />
@@ -87,7 +88,7 @@ export default function FirstRow(props) {
            
         <Grid item>
           <Typography variant="h3" align="center"
-              style={{ fontSize: matchesSM ? "1.25rem" : "1.5rem" ,
+              style={{ fontSize: matchesMD ? "1.25rem" : "1.5rem" ,
                color : "#00203FFF" ,
                 fontSize : "25px"  }}
             >
@@ -118,7 +119,7 @@ export default function FirstRow(props) {
 
    {/* Start 4th start*/}
       <Grid item>
-     <Grid item>
+     <Grid item >
           <LazyLoadImage className={classes.icon} alt="custom software icon"
                 src="/assets/users.svg"
               />
@@ -166,7 +167,7 @@ export default function FirstRow(props) {
     >
      {/* Start 2nd start*/}
      <Grid item>
-     <Grid item>
+     <Grid item >
           <LazyLoadImage className={classes.icon} alt="custom software icon"
                 src="/assets/mobileIcon.svg"
               />
