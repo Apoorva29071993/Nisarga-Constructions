@@ -16,6 +16,8 @@ import FirstRow from "../src/ui/FirstRow";
 import SecondRow from "../src/ui/SecondRow";
 import ThirdRow from "../src/ui/ThirdRow";
 import FourthRow from "../src/ui/FourthRow";
+import SixthRow from "../src/ui/SixthRow";
+
 
 import animationData from "../src/animations/landinganimation/data";
 
@@ -170,25 +172,19 @@ export default function LandingPage(props) {
         <link rel="canonical" key="canonical" href="arc.com" />
       </Head>
 
+      <Grid item>
+          <SixthRow setValue={props.setValue} />
+       </Grid>
+
         <Grid item>
           <FirstRow setValue={props.setValue} />
        </Grid>
 
-       
        <Grid item>
           <ThirdRow setValue={props.setValue} />
        </Grid>
 
        <Grid item>
-          <SecondRow setValue={props.setValue} />
-       </Grid>
-
-       <Grid item>
-          <FourthRow setValue={props.setValue} />
-       </Grid>
-
-
-      <Grid item>
         {" "}
         {/*-----Hero Block-----*/}
         <Grid container justify="flex-end" alignItems="center" direction="row">
@@ -243,157 +239,14 @@ export default function LandingPage(props) {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item>
-        {" "}
-        {/*-----Custom Software Block-----*/}
-        <Grid
-          container
-          direction="row"
-          justify={matchesSM ? "center" : undefined}
-          className={classes.serviceContainer}
-        >
-          <Grid
-            item
-            style={{
-              marginLeft: matchesSM ? 0 : "5em",
-              textAlign: matchesSM ? "center" : undefined
-            }}
-          >
-            <Typography variant="h4">Custom Software Development</Typography>
-            <Typography variant="subtitle1" className={classes.subtitle}>
-              Save Energy. Save Time. Save Money.
-            </Typography>
-            <Typography variant="subtitle1">
-              Complete digital solutions, from investigation to{" "}
-              <span className={classes.specialText}>celebration.</span>
-            </Typography>
-            <Button
-              component={Link}
-              href="/customsoftware"
-              variant="outlined"
-              className={classes.learnButton}
-              onClick={() => {
-                props.setValue(1);
-                props.setSelectedIndex(1);
-              }}
-            >
-              <span style={{ marginRight: 10 }}>Learn More</span>
-              <ButtonArrow
-                width={10}
-                height={10}
-                fill={theme.palette.common.blue}
-              />
-            </Button>
-          </Grid>
-          <Grid item>
-            <LazyLoadImage
-              className={classes.icon}
-              alt="custom software icon"
-              src="/assets/customSoftware.svg"
-            />
-          </Grid>
-        </Grid>
-      </Grid>
-      <Grid item>
-        {" "}
-        {/*-----iOS/Android Block-----*/}
-        <Grid
-          container
-          direction="row"
-          justify={matchesSM ? "center" : "flex-end"}
-          className={classes.serviceContainer}
-        >
-          <Grid
-            item
-            style={{
-              textAlign: matchesSM ? "center" : undefined
-            }}
-          >
-            <Typography variant="h4">iOS/Android App Development</Typography>
-            <Typography variant="subtitle1" className={classes.subtitle}>
-              Extend Functionality. Extend Access. Increase Engagement.
-            </Typography>
-            <Typography variant="subtitle1">
-              Integrate your web experience or create a standalone app
-              {matchesSM ? null : <br />}with either mobile platform.
-            </Typography>
-            <Button
-              component={Link}
-              href="/mobileapps"
-              variant="outlined"
-              className={classes.learnButton}
-              onClick={() => {
-                props.setValue(1);
-                props.setSelectedIndex(2);
-              }}
-            >
-              <span style={{ marginRight: 10 }}>Learn More</span>
-              <ButtonArrow
-                width={10}
-                height={10}
-                fill={theme.palette.common.blue}
-              />
-            </Button>
-          </Grid>
-          <Grid item style={{ marginRight: matchesSM ? 0 : "5em" }}>
-            <LazyLoadImage
-              className={classes.icon}
-              alt="mobile phone icon"
-              src="/assets/mobileIcon.svg"
-            />
-          </Grid>
-        </Grid>
-      </Grid>
-      <Grid item>
-        {" "}
-        {/*-----Websites Block-----*/}
-        <Grid
-          container
-          direction="row"
-          justify={matchesSM ? "center" : undefined}
-          className={classes.serviceContainer}
-        >
-          <Grid
-            item
-            style={{
-              marginLeft: matchesSM ? 0 : "5em",
-              textAlign: matchesSM ? "center" : undefined
-            }}
-          >
-            <Typography variant="h4">Website Development</Typography>
-            <Typography variant="subtitle1" className={classes.subtitle}>
-              Reach More. Discover More. Sell More.
-            </Typography>
-            <Typography variant="subtitle1">
-              Optimized for Search Engines,{matchesXS && <br />}built for speed.
-            </Typography>
-            <Button
-              component={Link}
-              href="/websites"
-              variant="outlined"
-              className={classes.learnButton}
-              onClick={() => {
-                props.setValue(1);
-                props.setSelectedIndex(3);
-              }}
-            >
-              <span style={{ marginRight: 10 }}>Learn More</span>
-              <ButtonArrow
-                width={10}
-                height={10}
-                fill={theme.palette.common.blue}
-              />
-            </Button>
-          </Grid>
-          <Grid item>
-            <LazyLoadImage
-              className={classes.icon}
-              alt="website icon"
-              src="/assets/websiteIcon.svg"
-            />
-          </Grid>
-        </Grid>
-      </Grid>
+
+       <Grid item>
+          <FourthRow setValue={props.setValue} />
+       </Grid>
+
+
+      
+      
       <Grid item>
         {/*-----The Revolution Block-----*/}
         <Grid
@@ -411,7 +264,7 @@ export default function LandingPage(props) {
               >
                 <Grid item>
                   <Typography variant="h3" gutterBottom>
-                    The Revolution
+                    Contact Us
                   </Typography>
                 </Grid>
                 <Grid item>
@@ -442,90 +295,7 @@ export default function LandingPage(props) {
           </LazyLoadComponent>
         </Grid>
       </Grid>
-      <Grid item>
-        {/*-----Information Block-----*/}
-        <Grid
-          container
-          style={{ height: "77em" }}
-          alignItems="center"
-          direction="row"
-        >
-          <Grid
-            item
-            container
-            style={{
-              textAlign: matchesXS ? "center" : "inherit"
-            }}
-            direction={matchesXS ? "column" : "row"}
-          >
-            <Grid
-              item
-              sm
-              style={{ marginLeft: matchesXS ? 0 : matchesSM ? "2em" : "5em" }}
-            >
-              <Grid
-                container
-                style={{ marginBottom: matchesXS ? "10em" : 0 }}
-                direction="column"
-              >
-                <Typography variant="h1" style={{ color: "white" }}>
-                  About Us
-                </Typography>
-                <Typography variant="subtitle2">Let's get personal.</Typography>
-                <Grid item>
-                  <Button
-                    component={Link}
-                    href="/about"
-                    variant="outlined"
-                    style={{ color: "white", borderColor: "white" }}
-                    className={classes.learnButton}
-                    onClick={() => props.setValue(3)}
-                  >
-                    <span style={{ marginRight: 10 }}>Learn More</span>
-                    <ButtonArrow width={10} height={10} fill="white" />
-                  </Button>
-                </Grid>
-              </Grid>
-            </Grid>
-            <Grid
-              item
-              sm
-              style={{
-                marginRight: matchesXS ? 0 : matchesSM ? "2em" : "5em",
-                textAlign: matchesXS ? "center" : "right"
-              }}
-            >
-              <Grid container direction="column">
-                <Typography variant="h1" style={{ color: "white" }}>
-                  Contact Us
-                </Typography>
-                <Typography variant="subtitle2">
-                  Say hello!{" "}
-                  <span role="img" aria-label="waving hand">
-                    👋🏻
-                  </span>
-                </Typography>
-                <Grid item>
-                  <Button
-                    component={Link}
-                    href="/contact"
-                    variant="outlined"
-                    style={{ color: "white", borderColor: "white" }}
-                    className={classes.learnButton}
-                    onClick={() => props.setValue(4)}
-                  >
-                    <span style={{ marginRight: 10 }}>Learn More</span>
-                    <ButtonArrow width={10} height={10} fill="white" />
-                  </Button>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-          <LazyLoadComponent threshold={700}>
-            <div className={classes.infoBackground} />
-          </LazyLoadComponent>
-        </Grid>
-      </Grid>
+
       <Grid item>
         <LazyLoadComponent threshold={700}>
           {/*-----Call To Action Block-----*/}

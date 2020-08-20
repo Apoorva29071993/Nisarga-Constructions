@@ -192,7 +192,7 @@ export default function Contact(props) {
   return (
     <Grid container direction="row">
       <Head>
-        <title key="title">Contact Us | Arc Development</title>
+        <title key="title">Contact Us | Nisarga Constructions</title>
         <meta
           name="description"
           key="description"
@@ -258,7 +258,7 @@ export default function Contact(props) {
                     href="tel:5555555555"
                     style={{ textDecoration: "none", color: "inherit" }}
                   >
-                    (555) 555-5555
+                    9945775559
                   </a>
                 </Typography>
               </Grid>
@@ -280,7 +280,7 @@ export default function Contact(props) {
                     href="mailto:zachary@gmail.com"
                     style={{ textDecoration: "none", color: "inherit" }}
                   >
-                    zachary@gmail.com
+                    apoorva@gmail.com
                   </a>
                 </Typography>
               </Grid>
@@ -324,7 +324,7 @@ export default function Contact(props) {
                 value={message}
                 className={classes.message}
                 multiline
-                placeholder="Tell us more about your project"
+                placeholder="Tell us more about your requirements"
                 fullWidth
                 rows={10}
                 id="message"

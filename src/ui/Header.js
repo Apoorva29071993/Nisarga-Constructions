@@ -138,7 +138,7 @@ const useStyles = makeStyles(theme => ({
   },
   appbar: {
     zIndex: theme.zIndex.modal + 1 ,
-    backgroundColor : "#00203FFF"
+    backgroundColor : "#f9c5bd"
   },
   expansion: {
     backgroundColor: theme.palette.common.blue,
@@ -164,10 +164,11 @@ const useStyles = makeStyles(theme => ({
       props.value === 1 ? "rgba(0, 0, 0, 0.14)" : "inherit"
   },
   logoContent : {
-    fontSize : "22px" ,
+    fontSize : "25px" ,
     fontWeight : 900 ,
-    fontFamily : "Roboto",
-    color : "#ADEFD1FF" ,
+    fontFamily : "Raleway",
+    marginLeft : "2em" ,
+    color : "#2d545e" ,
     [theme.breakpoints.down("md")]: {
       marginLeft: "5em"
     }
@@ -219,49 +220,37 @@ export default function Header(props) {
 
   const menuOptions = [
     {
-      name: "TurnKey House Construction",
-      link: "/turnkeyHouse",
+      name: "Completed Projects",
+      link: "/completedProjects",
       activeIndex: 1,
       selectedIndex: 0
     },
     {
-      name: "Compound Wall Construction",
-      link: "/mobileapps",
+      name: "On Going Projects",
+      link: "/ongoingProjects",
       activeIndex: 1,
       selectedIndex: 1
     },
     {
-      name: "Commercial Construction",
-      link: "/websites",
+      name: "Future projects",
+      link: "/futureProjects",
       activeIndex: 1,
       selectedIndex: 2
-    },
-    {
-      name: "Carpentry & Woodwork",
-      link: "/websites",
-      activeIndex: 1,
-      selectedIndex: 3
-    },
-    {
-      name: "Kitchen Renovation",
-      link: "/websites",
-      activeIndex: 1,
-      selectedIndex: 4
     }
   ];
 
   const routes = [
     { name: "Home", link: "/", activeIndex: 0 },
     {
-      name: "Hire Professionals",
+      name: "Projects",
       link: "/services",
       activeIndex: 1,
       ariaOwns: anchorEl ? "simple-menu" : undefined,
       ariaPopup: anchorEl ? "true" : undefined,
       mouseOver: event => handleClick(event)
     },
-    { name: "How It Works", link: "/revolution", activeIndex: 2 },
-    { name: "Our Projects", link: "/about", activeIndex: 3 },
+    { name: "Revolution", link: "/revolution", activeIndex: 2 },
+    { name: "About Us", link: "/about", activeIndex: 3 },
     { name: "Contact Us", link: "/contact", activeIndex: 4 }
   ];
 
@@ -577,12 +566,12 @@ export default function Header(props) {
             alignItems="center"  className={classes.logoContent}>
               <Grid item >
                 <Typography variant="inherit"  >
-                Mr.Apoorva  
+                Nisarga  
                 </Typography>
               </Grid>
               <Grid>
               <Typography variant="inherit">
-              Website Development  
+              Constructions  
               </Typography>
               </Grid>
             </Grid>

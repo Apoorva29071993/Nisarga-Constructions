@@ -233,15 +233,7 @@ export default function FourthRow(props) {
                 
      {/* End 3rd row*/} 
 
-    {/* Start 4th row*/}         
-    <Grid item container justify="center">
-    <Typography variant="h1" align="center" 
-    style={{fontSize : matchesMD ? "3em" : "7em" , color : "aqua"}}>
-        Products Images Slide
-    </Typography>
-    <Carousel views={images} />;
-     </Grid>
-     {/* End 4th row*/} 
+    
                                         
 
  

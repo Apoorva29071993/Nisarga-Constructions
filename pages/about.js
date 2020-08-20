@@ -49,7 +49,7 @@ export default function About(props) {
   return (
     <Grid container direction="column">
       <Head>
-        <title key="title">About Us - History & Team | Arc Development</title>
+        <title key="title">About Us - History & Team | Nisarga Constructions</title>
         <meta
           name="description"
           key="description"
@@ -68,7 +68,7 @@ export default function About(props) {
         className={classes.rowContainer}
         style={{ marginTop: matchesMD ? "1em" : "2em" }}
       >
-        <Typography align={matchesMD ? "center" : undefined} variant="h1">
+        <Typography align={matchesMD ? "center" : "center"} variant="h1">
           About Us
         </Typography>
       </Grid>
@@ -84,11 +84,8 @@ export default function About(props) {
           align="center"
           className={classes.missionStatement}
         >
-          Whether it be person to person, business to consumer, or an individual
-          to their interests, technology is meant to bring us closer to what we
-          care about in the best way possible. Arc Development will use that
-          principle to provide fast, modern, inexpensive, and aesthetic software
-          to the Midwest and beyond.
+          You can dream, create, design, and build the most wonderful 
+          place in the world. But it requires people to make the dream a reality.
         </Typography>
       </Grid>
       <Grid
@@ -188,94 +185,23 @@ export default function About(props) {
       >
         <Grid item>
           <Typography align="center" variant="h4" gutterBottom>
-            Team
+            Engineer
           </Typography>
         </Grid>
         <Grid item>
           <Typography variant="body1" paragraph align="center">
-            Zachary Reece, Founder
+            Apoorva Jakati, Founder
           </Typography>
           <Typography variant="body1" paragraph align="center">
-            I started coding when I was 9 years old.
+            Have experience in coding for more than 2 years.
           </Typography>
         </Grid>
         <Grid item>
           <Avatar
             alt="founder"
-            src="/assets/founder.jpg"
+            src="/assets/apoorva1.jpg"
             className={classes.avatar}
           />
-        </Grid>
-        <Grid item container justify={matchesMD ? "center" : undefined}>
-          <Hidden lgUp>
-            <Grid item lg style={{ maxWidth: "45em", padding: "1.25em" }}>
-              <Typography variant="body1" align="center" paragraph>
-                I taught myself basic coding from a library book in third grade,
-                and ever since then my passion has solely been set on learning —
-                learning about computers, learning mathematics and philosophy,
-                studying design, always just learning.
-              </Typography>
-              <Typography variant="body1" align="center" paragraph>
-                Now I’m ready to apply everything I’ve learned, and to help
-                others with the intuition I have developed.
-              </Typography>
-            </Grid>
-          </Hidden>
-          <Grid
-            item
-            container
-            direction="column"
-            lg
-            alignItems={matchesMD ? "center" : undefined}
-            style={{ marginBottom: matchesMD ? "2.5em" : 0 }}
-          >
-            <Grid item>
-              <img
-                src="/assets/yearbook.svg"
-                alt="yearbook page about founder"
-                style={{ maxWidth: matchesMD ? 300 : undefined }}
-              />
-            </Grid>
-            <Grid item>
-              <Typography variant="caption">
-                a page from my Sophomore yearbook
-              </Typography>
-            </Grid>
-          </Grid>
-          <Hidden mdDown>
-            <Grid item lg style={{ maxWidth: "45em", padding: "1.25em" }}>
-              <Typography variant="body1" align="center" paragraph>
-                I taught myself basic coding from a library book in third grade,
-                and ever since then my passion has solely been set on learning —
-                learning about computers, learning mathematics and philosophy,
-                studying design, always just learning.
-              </Typography>
-              <Typography variant="body1" align="center" paragraph>
-                Now I’m ready to apply everything I’ve learned, and to help
-                others with the intuition I have developed.
-              </Typography>
-            </Grid>
-          </Hidden>
-          <Grid
-            item
-            container
-            direction="column"
-            lg
-            alignItems={matchesMD ? "center" : "flex-end"}
-          >
-            <Grid item>
-              <img
-                src="/assets/puppy.svg"
-                alt="grey spotted puppy"
-                style={{ maxWidth: matchesMD ? 300 : undefined }}
-              />
-            </Grid>
-            <Grid item>
-              <Typography variant="caption">
-                my miniature dapple dachshund, Sterling
-              </Typography>
-            </Grid>
-          </Grid>
         </Grid>
       </Grid>
       <Grid item>

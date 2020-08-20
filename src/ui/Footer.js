@@ -6,7 +6,7 @@ import Hidden from "@material-ui/core/Hidden";
 
 const useStyles = makeStyles(theme => ({
   footer: {
-    backgroundColor: theme.palette.common.blue,
+    backgroundColor: "#f9c5bd",
     width: "100%",
     zIndex: 1302,
     position: "relative"
@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
   link: {
     color: "white",
     fontFamily: "Arial",
-    fontSize: "0.75rem",
+    fontSize: "1rem",
     fontWeight: "bold",
     textDecoration: "none"
   },
